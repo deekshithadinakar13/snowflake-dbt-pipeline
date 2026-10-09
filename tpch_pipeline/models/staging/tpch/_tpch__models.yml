@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_tpch__orders
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+      - name: order_status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['O', 'F', 'P']
+
+  - name: stg_tpch__customers
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__line_items
+    columns:
+      - name: line_item_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__nations
+    columns:
+      - name: nation_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_tpch__regions
+    columns:
+      - name: region_id
+        data_tests:
+          - unique
+          - not_null
