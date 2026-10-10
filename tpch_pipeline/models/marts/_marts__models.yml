@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: revenue_by_region_month
+    columns:
+      - name: region_name
+        data_tests:
+          - not_null
+      - name: order_month
+        data_tests:
+          - not_null
+      - name: total_revenue
+        data_tests:
+          - not_null
+
